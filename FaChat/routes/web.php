@@ -14,6 +14,6 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('login', [LoginController::class, 'redirecionarLogin'])->name('login');
+Route::get('login', [LoginController::class, 'redirecionarLogin'])->name('redirecionarLogin');
 Route::get('logar', [LoginController::class, 'logar'])->name('logar');
 Route::get('cadastro', [LoginController::class, 'redirecionarCadastro'])->name('redirecionarCadastro');

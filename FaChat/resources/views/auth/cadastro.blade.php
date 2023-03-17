@@ -68,32 +68,32 @@
                     <input type="hidden" name="_token" value="UNHg1OYLi3r2TMYu8nXzYaOhAaJ8yIZP5NaTJx9M">                    
                     <div class="form-group border">
                         <label for="nome" class="sr-only">Nome</label>
-                        <img src="/image/doc.png" alt="Senha" id="icon-login">
+                        <img src="/image/auth/doc.png" alt="Senha" id="icon-login">
                         <input value="" name="nome" type="text" placeholder="Nome" class="form-control " id="nome" aria-describedby="nome">
                     </div>
                     <input type="hidden" name="_token" value="UNHg1OYLi3r2TMYu8nXzYaOhAaJ8yIZP5NaTJx9M">                    
                     <div class="form-group border">
                         <label for="sobrenome" class="sr-only">Sobrenome</label>
-                        <img src="/image/doc.png" alt="sobrenome" id="icon-login">
+                        <img src="/image/auth/doc.png" alt="sobrenome" id="icon-login">
                         <input value="" name="nome" type="text" placeholder="Nome" class="form-control " id="nome" aria-describedby="nome">
                     </div>
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
-                        <img src="/image/doc.png" alt="email" id="icon-login">
+                        <img src="/image/auth/doc.png" alt="email" id="icon-login">
                         <input value="" name="email" type="email" placeholder="Email" class="form-control " id="email" aria-describedby="email">
                     </div>
                     <div class="form-group border">
                         <label for="senha" class="sr-only">Senha</label>
-                        <img src="/image/cadeado.png" alt="Senha" id="icon-login">
+                        <img src="/image/auth/cadeado.png" alt="Senha" id="icon-login">
                         <input value="" name="senha" type="password" placeholder="Senha" class="form-control " id="senha">
                     </div>
                     <div class="form-group border">
                         <label for="senha" class="sr-only">Confirmar Senha</label>
-                        <img src="/image/cadeado.png" alt="Senha" id="icon-login">
+                        <img src="/image/auth/cadeado.png" alt="Senha" id="icon-login">
                         <input value="" name="senha_confirmation" type="password" placeholder="Confirmar Senha" class="form-control " id="senha_confirmation">
                     </div>
                     <div class="btn-container text-center">
-                        <a href="/" class="btn btn-primary" id="btn-acessar">
+                        <a href="{{ route('redirecionarLogin') }}" class="btn btn-primary" id="btn-acessar">
                             Voltar
                         </a>
                         <button type="submit" class="btn btn-primary" id="btn-enviar">
