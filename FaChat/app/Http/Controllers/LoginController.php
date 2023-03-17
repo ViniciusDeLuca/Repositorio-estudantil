@@ -9,4 +9,8 @@ class LoginController extends Controller
     public function redirecionarLogin(){
         return view('auth.login');
     }
+
+    public function redirecionarCadastro(){
+        return view('auth.cadastro');
+    }
 }

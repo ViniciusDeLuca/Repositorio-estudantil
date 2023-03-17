@@ -1,0 +1,9 @@
+#scrollToTop {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+}
+
+#seta {
+    font-weight: 900;
+}
