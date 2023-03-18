@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InicioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 
@@ -13,7 +14,10 @@ use App\Http\Controllers\LoginController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// Rotas de login e cadastro
 Route::get('login', [LoginController::class, 'redirecionarLogin'])->name('login');
 Route::get('logar', [LoginController::class, 'logar'])->name('logar');
 Route::get('cadastro', [LoginController::class, 'redirecionarCadastro'])->name('redirecionarCadastro');
+Route::post('cadastrar', [LoginController::class, 'cadastrar'])->name('cadastrar');
+
+Route::get('', [InicioController::class, 'redirecionarInicio'])->name('inicio');

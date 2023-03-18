@@ -66,11 +66,18 @@
     <div class="card-header" id="header-color-al">
         <div class="content-form-login">
             <div class="login-wrapper">
-                <div class="admin">
-                    <img src="/" alt="FaChat" id="fachat">
-                </div>
+                @if (session('erro')))
+                    <div class="alert alert-danger">
+                        {{ session('erro') }}
+                    </div>
+                @endif
+                @if (session('sucesso')))
+                    <div class="alert alert-success">
+                        {{ session('sucesso') }}
+                    </div>
+                @endif
                 <br>
-                <form class="login-form" method="POST" action=" " autocomplete="off" id="cidadao-form">
+                <form class="login-form" method="POST" action="{{ route('logar') }}" autocomplete="off" id="cidadao-form">
                     <input type="hidden" name="_token" value="2sSVOwfJfEbDvcXvnS7PFMyvCTvC2gbpG5RJnpew">
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
