@@ -32,7 +32,7 @@ class CadastroRequest extends FormRequest
     public function messages() {
         return [
             'nome.required' => 'O nome é obrigatório',
-            'nome.required' => 'O sobrenome é obrigatório',
+            'sobrenome.required' => 'O sobrenome é obrigatório',
             'email.required' => 'O campo email é obrigatório',
             'email.unique' => 'Email já cadastrado',
             'senha.required' => 'A senha é obrigatória',

@@ -45,12 +45,15 @@ class LoginController extends Controller
             $usuario->sobrenome = $request->sobrenome;
             $usuario->email = $request->email;
             $usuario->senha = Hash::make($request->senha);
+            $usuario->docente = false;
+            $usuario->ativo = false;
 
             $usuario->save();
 
         }catch(\Throwable $th){
+            dd($th);
             abort(500);
         }
-        return redirect()->route('redirecionarLogin')->with('sucesso', 'Usuário cadastrado com sucesso!');
+        return redirect()->route('login')->with('sucesso', 'Usuário cadastrado com sucesso!');
     }
 }

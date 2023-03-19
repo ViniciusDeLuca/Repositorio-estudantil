@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Logado meu parceiro, {{ session()->all()['nome'] }}</h1>
+    <h1>Logado meu parceiro, {{ session('aluno')->nome ?? session('docente')->nome }}</h1>
 </body>
 </html>

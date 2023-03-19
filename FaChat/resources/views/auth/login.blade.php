@@ -66,19 +66,18 @@
     <div class="card-header" id="header-color-al">
         <div class="content-form-login">
             <div class="login-wrapper">
-                @if (session('erro')))
+                @if (session('erro'))
                     <div class="alert alert-danger">
                         {{ session('erro') }}
                     </div>
                 @endif
-                @if (session('sucesso')))
+                @if (session('sucesso'))
                     <div class="alert alert-success">
                         {{ session('sucesso') }}
                     </div>
                 @endif
                 <br>
-                <form class="login-form" method="POST" action="{{ route('logar') }}" autocomplete="off" id="cidadao-form">
-                    <input type="hidden" name="_token" value="2sSVOwfJfEbDvcXvnS7PFMyvCTvC2gbpG5RJnpew">
+                <form class="login-form" method="get" action="{{ route('logar') }}" autocomplete="off" id="cidadao-form">
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
                         <img src="/image/auth/doc.png" alt="Email" id="icon-login">
@@ -98,7 +97,7 @@
                             <button type="submit" class="btn btn-primary" id="btn-acessar">
                                 Entrar
                             </button>
-                            <a href="https://alagoasdigital.al.gov.br/cadastro" class="btn btn-primary" id="btn-acessar2">
+                            <a href="{{ route('redirecionarCadastro') }}" class="btn btn-primary" id="btn-acessar2">
                                 Cadastrar
                             </a>
                         </div>
