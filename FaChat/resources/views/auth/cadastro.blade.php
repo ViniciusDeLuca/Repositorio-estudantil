@@ -71,7 +71,7 @@
                     @csrf
                     <div class="form-group border">
                         <label for="nome" class="sr-only">Nome</label>
-                        <img src="/image/doc.png" alt="Senha" id="icon-login">
+                        <img src="/image/auth/doc.png" alt="Senha" id="icon-login">
                         <input value="{{ old('nome') }}" name="nome" type="text" placeholder="Nome" class="form-control @error('nome') is-invalid @enderror" id="nome" aria-describedby="nome">
                     </div>
                     @error('nome')
@@ -79,7 +79,7 @@
                     @enderror
                     <div class="form-group border">
                         <label for="sobrenome" class="sr-only">Sobrenome</label>
-                        <img src="/image/doc.png" alt="sobrenome" id="icon-login">
+                        <img src="/image/auth/doc.png" alt="sobrenome" id="icon-login">
                         <input value="{{ old('sobrenome') }}" name="sobrenome" type="text" placeholder="Nome" class="form-control @error('sobrenome') is-invalid @enderror" id="nome" aria-describedby="nome">
                     </div>
                     @error('sobrenome')
@@ -87,7 +87,7 @@
                     @enderror
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
-                        <img src="/image/doc.png" alt="email" id="icon-login">
+                        <img src="/image/auth/doc.png" alt="email" id="icon-login">
                         <input value="{{ old('email') }}" name="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" id="email" aria-describedby="email">
                     </div>
                     @error('email')
@@ -95,7 +95,7 @@
                     @enderror
                     <div class="form-group border">
                         <label for="senha" class="sr-only">Senha</label>
-                        <img src="/image/cadeado.png" alt="Senha" id="icon-login">
+                        <img src="/image/auth/cadeado.png" alt="Senha" id="icon-login">
                         <input name="senha" type="password" placeholder="Senha" class="form-control @error('senha') is-invalid @enderror" id="senha">
                     </div>
                     @error('senha')
@@ -103,14 +103,14 @@
                     @enderror
                     <div class="form-group border">
                         <label for="senha" class="sr-only">Confirmar Senha</label>
-                        <img src="/image/cadeado.png" alt="Senha" id="icon-login">
+                        <img src="/image/auth/cadeado.png" alt="Senha" id="icon-login">
                         <input name="senha_confirmation" type="password" placeholder="Confirmar Senha" class="form-control @error('senha') is-invalid @enderror" id="senha_confirmation">
                     </div>
                     @error('senha')
                         <div class="text-danger">{{$message}}</div>
                     @enderror
                     <div class="btn-container text-center">
-                        <a href="/" class="btn btn-primary" id="btn-acessar">
+                        <a href="{{ route('redirecionarLogin') }}" class="btn btn-primary" id="btn-acessar">
                             Voltar
                         </a>
                         <button type="submit" class="btn btn-primary" id="btn-enviar">
