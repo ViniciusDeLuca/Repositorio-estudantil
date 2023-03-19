@@ -110,7 +110,7 @@
                         <div class="text-danger">{{$message}}</div>
                     @enderror
                     <div class="btn-container text-center">
-                        <a href="{{ route('redirecionarLogin') }}" class="btn btn-primary" id="btn-acessar">
+                        <a href="{{ route('login') }}" class="btn btn-primary" id="btn-acessar">
                             Voltar
                         </a>
                         <button type="submit" class="btn btn-primary" id="btn-enviar">
