@@ -2,6 +2,10 @@ html {
     background-color: #EFEFEF;
 }
 
+.titulo-login {
+    color: #024461;
+}
+
 .sr-only {
     position: absolute;
     height: 1px;
@@ -16,8 +20,8 @@ html {
 
 .container-login {
     background-color: #EFEFEF;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
 }

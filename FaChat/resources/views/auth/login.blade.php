@@ -46,8 +46,8 @@
                     </div>
                 @endif
                 <br>
+                <h2 class="text-center titulo-login">Login</h2>
                 <form class="login-form" method="get" action="{{ route('logar') }}" autocomplete="off" id="cidadao-form">
-                    <h2>Login</h2>
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
                         <img src="/image/auth/doc.png" alt="Email" id="icon-login">
@@ -61,15 +61,12 @@
 
                     <div class="button-forgot">
                         <div class="btn-container">
-                            <!-- <button class="br-sign-in" type="button">Entrar com&nbsp;
-                                <img src="https://www.gov.br/++theme++padrao_govbr/img/govbr-colorido-b.png" alt="gov.br" />
-                            </button> -->
-                            <button type="submit" class="btn btn-primary" id="btn-acessar">
-                                Entrar
-                            </button>
                             <a href="{{ route('redirecionarCadastro') }}" class="btn btn-primary" id="btn-acessar2">
                                 Crie sua conta
                             </a>
+                            <button type="submit" class="btn btn-primary" id="btn-acessar">
+                                Entrar
+                            </button>
                         </div>
                     </div>
                 </form>

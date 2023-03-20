@@ -38,12 +38,11 @@
                 <div class="content-form-login">
                     <div class="login-wrapper">
                         @if (session('erro'))
-                            )
                             <div class="alert alert-danger">
                                 {{ session('erro') }}
                             </div>
                         @endif
-
+                        <h2 class="text-center titulo-login">Cadastro</h2>
                         <form class="login-form" action="{{ route('cadastrar') }}" method="POST">
                             @csrf
                             <div class="form-group border">
@@ -95,7 +94,7 @@
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                             <div class="btn-container text-center">
-                                <a href="{{ route('login') }}" class="btn btn-primary" id="btn-acessar">
+                                <a href="{{ route('login') }}" class="btn btn-primary" id="btn-acessar2">
                                     Voltar
                                 </a>
                                 <button type="submit" class="btn btn-primary" id="btn-enviar">
