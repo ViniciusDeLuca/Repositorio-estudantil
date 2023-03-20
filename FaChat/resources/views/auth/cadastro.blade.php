@@ -51,7 +51,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>FaChat</title>
+    <title>Cadastro - FaChat</title>
 
 </head>
 
@@ -75,7 +75,7 @@
                     <div class="form-group border">
                         <label for="sobrenome" class="sr-only">Sobrenome</label>
                         <img src="/image/auth/doc.png" alt="sobrenome" id="icon-login">
-                        <input value="" name="nome" type="text" placeholder="Nome" class="form-control " id="nome" aria-describedby="nome">
+                        <input value="" name="nome" type="text" placeholder="Sobrenome" class="form-control " id="nome" aria-describedby="nome">
                     </div>
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
@@ -93,11 +93,11 @@
                         <input value="" name="senha_confirmation" type="password" placeholder="Confirmar Senha" class="form-control " id="senha_confirmation">
                     </div>
                     <div class="btn-container text-center">
-                        <a href="{{ route('redirecionarLogin') }}" class="btn btn-primary" id="btn-acessar">
+                        <a href="{{ route('redirecionarLogin') }}" class="btn btn-primary" id="btn-acessar2">
                             Voltar
                         </a>
                         <button type="submit" class="btn btn-primary" id="btn-enviar">
-                            Finalizar
+                            Cadastro
                         </button>
                     </div>
                 </form>

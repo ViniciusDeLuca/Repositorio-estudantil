@@ -70,6 +70,7 @@
                 </div>
                 <br>
                 <form class="login-form" method="POST" action=" " autocomplete="off" id="cidadao-form">
+                    <h2>Login</h2>
                     <input type="hidden" name="_token" value="2sSVOwfJfEbDvcXvnS7PFMyvCTvC2gbpG5RJnpew">
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
@@ -91,7 +92,7 @@
                                 Entrar
                             </button>
                             <a href="{{ route('redirecionarCadastro') }}" class="btn btn-primary" id="btn-acessar2">
-                                Cadastrar
+                                Crie sua conta
                             </a>
                         </div>
                     </div>
