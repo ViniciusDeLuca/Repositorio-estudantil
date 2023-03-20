@@ -47,6 +47,7 @@
                 @endif
                 <br>
                 <form class="login-form" method="get" action="{{ route('logar') }}" autocomplete="off" id="cidadao-form">
+                    <h2>Login</h2>
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
                         <img src="/image/auth/doc.png" alt="Email" id="icon-login">
@@ -67,7 +68,7 @@
                                 Entrar
                             </button>
                             <a href="{{ route('redirecionarCadastro') }}" class="btn btn-primary" id="btn-acessar2">
-                                Cadastrar
+                                Crie sua conta
                             </a>
                         </div>
                     </div>

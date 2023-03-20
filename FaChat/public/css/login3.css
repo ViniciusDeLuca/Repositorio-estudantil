@@ -16,10 +16,10 @@ html {
 
 .container-login {
     background-color: #EFEFEF;
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction:column;
     width: 100vw;
-    height: 130vh;
+    height: 100vh;
 }
 
 .container-forgot {
@@ -75,7 +75,7 @@ html {
 }
 
 #header-color-al {
-    background-image: linear-gradient(to right, #02a2f9, #8342bd);
+    background-image: linear-gradient(to right, #024461, #0293d1);
     height: 40px;
     padding: 6px 0;
     margin: 5% 30%;
@@ -93,8 +93,8 @@ html {
 }
 
 #btn-enviar {
-    background-color: #427bbd;
-    width: 6rem;
+    background-color: #0377a7;
+    width: 8rem;
     height: 2.5rem;
     text-align: center;
     font-size: 1rem;
@@ -104,14 +104,14 @@ html {
 }
 
 #btn-acessar {
-    background-color: #ffffff;
-    color: #8342bd;
-    width: 6rem;
+    background-color: #0377a7;
+    color: #ffffff;
+    width: 8rem;
     height: 2.5rem;
     text-align: center;
     font-size: 1rem;
     border-radius: .5rem;
-    border-color: #8342bd;
+    border-color: #0377a7;
     margin: 1rem;
 }
 
@@ -204,13 +204,13 @@ html {
 
 #btn-acessar2 {
     background-color: #ffffff;
-    color: #427bbd;
+    color: #0377a7;
     width: 8rem;
     height: 2.5rem;
     text-align: center;
     font-size: 1rem;
     border-radius: .5rem;
-    border-color: #427bbd;
+    border-color: #0377a7;
     margin: 1rem;
 }
 
@@ -243,19 +243,19 @@ html {
                 font-size: 2rem;
             }
             #btn-enviar {
-                width: 6rem;
+                width: 8rem;
                 height: 2.5rem;
                 font-size: 1rem;
                 margin-right: .2rem;
             }
             #btn-acessar {
-                width: 6rem;
+                width: 8rem;
                 height: 2.5rem;
                 font-size: 1rem;
                 margin-right: .2rem;
             }
             #btn-acessar2 {
-                width: 6rem;
+                width: 8rem;
                 height: 2.5rem;
                 font-size: 1rem;
                 margin-right: .2rem;
