@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CadastroRequest;
+use App\Models\Mantenedor;
 use Illuminate\Http\Request;
 use App\Models\Usuario;
 use Illuminate\Support\Facades\Hash;
@@ -28,7 +29,7 @@ class LoginController extends Controller
                 return redirect()->route('inicio');
             }
         }else{
-            return redirect()->back()->with('erro', 'Credenciais inválidas');
+            return redirect()->back()->with('erro', 'Credenciais inválidas!');
         }
     }
 
@@ -55,5 +56,20 @@ class LoginController extends Controller
             abort(500);
         }
         return redirect()->route('login')->with('sucesso', 'Usuário cadastrado com sucesso!');
+    }
+
+    public function redirecionarLoginMantenedor(){
+        return view('auth.loginMantenedor');
+    }
+
+    public function logarMantenedor(Request $request){
+        $mantenedor = Mantenedor::where('login', $request->login)->first();
+
+        if($mantenedor && ($mantenedor->ativo == false) && (Hash::check($request->senha, $mantenedor->senha))){
+            session()->put('mantenedor', $mantenedor);
+            return view('mantenedor.index');
+        }else{
+            return redirect()->back()->with('erro', 'Credenciais inválidas!');
+        }
     }
 }
