@@ -38,8 +38,13 @@
                 <div class="content-form-login">
                     <div class="login-wrapper">
                         @if (session('erro'))
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger" id="erro">
                                 {{ session('erro') }}
+                            </div>
+                        @endif
+                        @if (session('sucesso'))
+                            <div class="alert alert-success" id="sucesso">
+                                {{ session('sucesso') }}
                             </div>
                         @endif
                         <h2 class="text-center titulo-login">Cadastro</h2>
@@ -118,6 +123,22 @@
         </script>
 
     </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById("erro").style.display = "none";
+        }, 15000);
+    
+        function hide() {
+            document.getElementById("erro").style.display = "none";
+        }
+        setTimeout(function() {
+            document.getElementById("sucesso").style.display = "none";
+        }, 15000);
+    
+        function hide() {
+            document.getElementById("sucesso").style.display = "none";
+        }
+    </script>
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>

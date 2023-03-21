@@ -31,27 +31,26 @@
 
 <div class="container-login">
     <div class="row">
-                    </div>
+    </div>
     <div class="card-header" id="header-color-al">
         <div class="content-form-login">
             <div class="login-wrapper">
                 @if (session('erro'))
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger" id="erro">
                         {{ session('erro') }}
                     </div>
                 @endif
                 @if (session('sucesso'))
-                    <div class="alert alert-success">
+                    <div class="alert alert-success sucesso" id="sucesso">
                         {{ session('sucesso') }}
                     </div>
                 @endif
-                <br>
                 <h2 class="text-center titulo-login">Login</h2>
                 <form class="login-form" method="get" action="{{ route('logar') }}" autocomplete="off" id="cidadao-form">
                     <div class="form-group border">
                         <label for="email" class="sr-only">Email</label>
                         <img src="/image/auth/doc.png" alt="Email" id="icon-login">
-                        <input value="" required name="email" type="email" placeholder="Email" class="form-control" id="email" aria-describedby="email">
+                        <input value="{{ old('email') }}" required name="email" type="email" placeholder="Email" class="form-control" id="email" aria-describedby="email">
                     </div>
                     <div class="form-group border">
                         <label for="senha" class="sr-only">Senha</label>
@@ -90,35 +89,6 @@
     function hide() {
         document.getElementById("sucesso").style.display = "none";
     }
-
-    function hide() {
-        document.getElementById("erro3").style.display = "none";
-    }
-
-    var btn1 = document.querySelector("#ldap_check");
-    var btn2 = document.querySelector("#btn-acessar");
-    var formLDAP = document.querySelector("#ldap-form");
-    var formCidadao = document.querySelector("#cidadao-form");
-
-    btn1.addEventListener("click", function() {
-
-        if (formLDAP.style.display === "none") {
-            formLDAP.style.display = "block";
-            formCidadao.style.display = "none";
-        } else {
-            formLDAP.style.display = "none";
-            formCidadao.style.display = "block";
-        }
-    });
-
-    btn2.addEventListener("click", function() {
-
-        if (formLDAP.style.display === "none") {
-            formCidadao.submit();
-        } else {
-            formLDAP.submit();
-        }
-    });
 </script>
 
     </div>
