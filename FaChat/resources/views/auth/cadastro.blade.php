@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,9 +64,9 @@
                             <div class="form-group border">
                                 <label for="sobrenome" class="sr-only">Sobrenome</label>
                                 <img src="/image/auth/doc.png" alt="sobrenome" id="icon-login">
-                                <input value="{{ old('sobrenome') }}" name="sobrenome" type="text" placeholder="Nome"
-                                    class="form-control @error('sobrenome') is-invalid @enderror" id="nome"
-                                    aria-describedby="nome">
+                                <input value="{{ old('sobrenome') }}" name="sobrenome" type="text"
+                                    placeholder="Nome" class="form-control @error('sobrenome') is-invalid @enderror"
+                                    id="nome" aria-describedby="nome">
                             </div>
                             @error('sobrenome')
                                 <div class="text-danger">{{ $message }}</div>
@@ -127,14 +128,14 @@
         setTimeout(function() {
             document.getElementById("erro").style.display = "none";
         }, 15000);
-    
+
         function hide() {
             document.getElementById("erro").style.display = "none";
         }
         setTimeout(function() {
             document.getElementById("sucesso").style.display = "none";
         }, 15000);
-    
+
         function hide() {
             document.getElementById("sucesso").style.display = "none";
         }
