@@ -65,7 +65,7 @@
                                 <label for="sobrenome" class="sr-only">Sobrenome</label>
                                 <img src="/image/auth/doc.png" alt="sobrenome" id="icon-login">
                                 <input value="{{ old('sobrenome') }}" name="sobrenome" type="text"
-                                    placeholder="Nome" class="form-control @error('sobrenome') is-invalid @enderror"
+                                    placeholder="Sobrenome" class="form-control @error('sobrenome') is-invalid @enderror"
                                     id="nome" aria-describedby="nome">
                             </div>
                             @error('sobrenome')

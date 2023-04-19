@@ -15,7 +15,9 @@ class AuthLogado
      */
     public function handle(Request $request, Closure $next): Response
     {   
-        if(!session('usuario') || !session('docente')){
+        if(session('aluno') || session('docente')){
+            return $next($request);
+        }else{
             return redirect()->route('login')->with('erro', 'Você não está logado!');
         }
         return $next($request);
