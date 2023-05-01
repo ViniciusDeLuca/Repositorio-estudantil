@@ -29,7 +29,7 @@ class LoginController extends Controller
                 return redirect()->route('inicio');
             }
         }else{
-            return redirect()->back()->with('erro', 'Credenciais inválidas!');
+            return redirect()->route('inicio')->with('erro', 'Credenciais inválidas!');
         }
     }
 
@@ -71,5 +71,17 @@ class LoginController extends Controller
         }else{
             return redirect()->back()->with('erro', 'Credenciais inválidas!');
         }
+    }
+
+    public function logout()
+    {
+        if(session('docente')){
+            session()->forget('docente');
+        }
+        if(session('aluno')){
+            session()->forget('aluno');
+        }
+
+        return redirect()->route('login');
     }
 }

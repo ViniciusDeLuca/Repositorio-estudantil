@@ -17,10 +17,13 @@ use App\Http\Middleware\AuthLogado;
 |
 */
 // Rotas de login e cadastro
-Route::get('login', [LoginController::class, 'redirecionarLogin'])->name('login');
-Route::get('logar', [LoginController::class, 'logar'])->name('logar');
-Route::get('cadastro', [LoginController::class, 'redirecionarCadastro'])->name('redirecionarCadastro');
-Route::post('cadastrar', [LoginController::class, 'cadastrar'])->name('cadastrar');
+Route::controller(LoginController::class)->group(function () {
+    Route::get('login', 'redirecionarLogin')->name('login');
+    Route::get('logar', 'logar')->name('logar');
+    Route::get('cadastro', 'redirecionarCadastro')->name('redirecionarCadastro');
+    Route::post('cadastrar', 'cadastrar')->name('cadastrar');
+    Route::get('logout', 'logout')->name('logout');
+});
 
 //login de mantenedor
 Route::get('mantenedor/login', [LoginController::class, 'redirecionarLoginMantenedor'])->name('redirecionarLoginMantenedor');
@@ -30,6 +33,9 @@ Route::prefix('mantenedor')->middleware('AuthMantenedor')->group(function () {
     Route::get('', [MantenedorController::class, 'index'])->name('index');
 });
 
-Route::middleware('AuthLogado')->group(function () {
-    Route::get('', [InicioController::class, 'redirecionarInicio'])->name('inicio');
+Route::middleware('AuthLogado')->controller(InicioController::class)->group(function () {
+    Route::get('', 'redirecionarInicio')->name('inicio');
+    Route::get('publicacao/{id}', 'publicacao')->name('redirecionarPublicacao');
+    Route::get('cadastrarPublicacao', 'redirecionarCadastroPublicacao')->name('redirecionarCadastroPublicacao');
+    Route::post('publicacao/salvar', 'cadastrarPublicacao')->name('cadastrarPublicacao');
 });

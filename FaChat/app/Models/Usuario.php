@@ -10,4 +10,9 @@ class Usuario extends Model
     use HasFactory;
 
     protected $table = 'usuario';
+
+    public function publicacao()
+    {
+        return $this->hasMany(Publicacao::class, 'id_autor', 'id');
+    }
 }

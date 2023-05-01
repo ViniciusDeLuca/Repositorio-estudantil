@@ -18,7 +18,7 @@ class AuthLogado
         if(session('aluno') || session('docente')){
             return $next($request);
         }else{
-            return redirect()->route('login')->with('erro', 'Você não está logado!');
+            return redirect()->route('login')->with('erro', 'Para acessar essa página necessita estar logado!');
         }
         return $next($request);
     }

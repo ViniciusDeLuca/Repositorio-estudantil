@@ -1181,6 +1181,17 @@
     }
 }
 
+.container-publicacao {
+    overflow: hidden;
+}
+
+.conteudo-publicacao {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+
 @media only screen and (min-width: 1022px) and (max-width: 1200px) {
     #corpo-modal {
         width: 150%;
