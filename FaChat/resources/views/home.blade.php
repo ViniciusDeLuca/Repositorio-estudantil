@@ -19,7 +19,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ $publicacao->titulo }}</h5>
         <div class="container-publicacao">
-          <div class="conteudo-publicacao text-start">{{ $publicacao->conteudo }}
+          <div class="conteudo-publicacao text-start">{!! $publicacao->conteudo !!}
           </div>
         </div>
         @if($publicacao->data_entrega)

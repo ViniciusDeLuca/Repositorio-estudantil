@@ -73,7 +73,7 @@
                                 <div class="btn-container">
                                     <a href="{{ route('redirecionarCadastro') }}" class="btn btn-primary"
                                         id="btn-acessar2">
-                                        Crie sua conta
+                                        Cadastre-se
                                     </a>
                                     <button type="submit" class="btn btn-primary" id="btn-acessar">
                                         Entrar

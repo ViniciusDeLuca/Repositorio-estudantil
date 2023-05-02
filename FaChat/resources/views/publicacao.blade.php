@@ -7,7 +7,7 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ $publicacao->titulo }}</h5>
-          <p class="card-text text-start">{{ $publicacao->conteudo }}</p>
+          <p class="card-text text-start">{!! $publicacao->conteudo !!}</p>
           @if($publicacao->data_entrega)
             <p class="card-text text-start text-danger">Data de entrega: {{ date('d/m/Y',strtotime($publicacao->data_entrega)) }}</p>
           @endif
